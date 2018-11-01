@@ -43,7 +43,7 @@ hub:
   extraVolumeMounts: []
   image:
     name: jupyterhub/k8s-hub
-    tag: 'db9569c'
+    tag: generated-by-chartpress
   resources:
     requests:
       cpu: 200m
@@ -119,8 +119,8 @@ proxy:
       cert:
     secret:
       name: ''
-      key: tls.key
-      crt: tls.crt
+      key: 'tls.key'
+      crt: 'tls.crt'
     hosts: []
   networkPolicy:
     enabled: false
@@ -164,7 +164,7 @@ singleuser:
   networkTools:
     image:
       name: jupyterhub/k8s-network-tools
-      tag: 'cc865bd'
+      tag: generated-by-chartpress
   cloudMetadata:
     enabled: false
     ip: 169.254.169.254
@@ -204,7 +204,7 @@ singleuser:
       storageAccessModes: [ReadWriteOnce]
   image:
     name: jupyterhub/k8s-singleuser-sample
-    tag: 'cc865bd'
+    tag: generated-by-chartpress
     pullPolicy: IfNotPresent
   imagePullSecret:
     enabled: false
@@ -261,7 +261,7 @@ prePuller:
     extraEnv: {}
     image:
       name: jupyterhub/k8s-image-awaiter
-      tag: 'cc865bd'
+      tag: generated-by-chartpress
   continuous:
     enabled: false
   extraImages: {}
